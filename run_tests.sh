@@ -17,6 +17,7 @@ then
 elif [ "$TEST_TYPE" = "all" ]
 then
   sbt "testOnly *Spec"
+  echo ">>> Running tests before generating JAR."
   cd /source
   sbt assembly
 else
