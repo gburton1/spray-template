@@ -10,3 +10,9 @@ tests:
     - ./target/scala-2.11:/source/target/scala-2.11
   environment:
     - TEST_TYPE=all
+
+assembly:
+  extends:
+    service: tests
+  environment:
+    - TEST_TYPE=assembly
